@@ -8,7 +8,7 @@ To use JS scripts in WinDbg you need WinDbg Preview or regular WinDbg from Febru
 
 You can load scripts by hand:
 1. Load JS engine first: .load jsprovider.dll
-2. Then load script: .scriptload <файл скрипта с полным путём>
+2. Then load script: .scriptload <script filename with full path>
 
 --or--
 
