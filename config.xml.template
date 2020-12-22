@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Settings Version="1">
+  <Namespace Name="Extensions">
+    <Setting Name="ExtensionRepository" Type="VT_BSTR" Value="Implicit"></Setting>
+    <Namespace Name="ExtensionRepositories">
+      <Namespace Name="KL WinDbg Script Gallery">
+        <Setting Name="Id" Type="VT_BSTR" Value="9853FFCF-144E-44B3-A45B-A789DDC45A6B"></Setting>
+        <Setting Name="LocalCacheRootFolder" Type="VT_BSTR" Value="\absolute\path\to\the\xmlmanifest\directory"></Setting>
+        <Setting Name="IsEnabled" Type="VT_BOOL" Value="true"></Setting>
+      </Namespace>
+    </Namespace>
+  </Namespace>
+</Settings>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ExtensionPackages Version="1.0.0.0" Compression="none">
+    <ExtensionPackage>
+        <Name>CommonHelpers</Name>
+        <Version>1.0.0.1</Version>
+        <Description>Some common helpers.</Description>
+        <Components>
+            <ScriptComponent Name="CommonHelpers" Type="Engine" File="common.js" FilePathKind="RepositoryRelative">
+                <FunctionAliases>
+                    <FunctionAlias Name="exccandidates">
+                        <AliasItem>
+                            <Syntax>
+                                <![CDATA[!exccandidates 0x[<thread ID>]]]>
+                            </Syntax>
+                            <Description>
+                                <![CDATA[Searches for possible exception records in stack of the thread specified by [<thread ID>] or in stack of the current thread]]>
+                            </Description>
+                        </AliasItem>
+                    </FunctionAlias>
+                    <FunctionAlias Name="walk_stdmap">
+                        <AliasItem>
+                            <Syntax>
+                                <![CDATA[!walk_stdmap [<head ptr(_Myhead field of std::map)>]]]>
+                            </Syntax>
+                            <Description>
+                                <![CDATA[Dumps all elements of the map (no interpretation, just dds) with address [<head ptr>]. The [<head ptr>] should be taken from _Myhead field of std::map]]>
+                            </Description>
+                        </AliasItem>
+                    </FunctionAlias>
+                </FunctionAliases>
+            </ScriptComponent>
+        </Components>
+    </ExtensionPackage>
+
+    <ExtensionPackage>
+        <Name>NoexceptHelper</Name>
+        <Version>1.0.0.1</Version>
+        <Description>Shows correct stack if it is shown wrong due to exception from noexcept functions.</Description>
+        <Components>
+            <ScriptComponent Name="NoexceptHelper" Type="Engine" File="noexcept.js" FilePathKind="RepositoryRelative">
+                <FunctionAliases>
+                    <FunctionAlias Name="fix_stack">
+                        <AliasItem>
+                            <Syntax>
+                                <![CDATA[!fix_stack]]>
+                            </Syntax>
+                            <Description>
+                                <![CDATA[Try to show corrected stack of the current thread if it is shown wrong due to an exception from noexcept function.]]>
+                            </Description>
+                        </AliasItem>
+                    </FunctionAlias>
+                </FunctionAliases>
+            </ScriptComponent>
+        </Components>
+    </ExtensionPackage>
+
+    <ExtensionPackage>
+        <Name>X64Helper</Name>
+        <Version>1.0.0.1</Version>
+        <Description>Try to show x32 stacks of all threads in x64 dump.</Description>
+        <Components>
+            <ScriptComponent Name="X64Helper" Type="Engine" File="x64.js" FilePathKind="RepositoryRelative">
+                <FunctionAliases>
+                    <FunctionAlias Name="x32stacks">
+                        <AliasItem>
+                            <Syntax>
+                                <![CDATA[!x32stacks]]>
+                            </Syntax>
+                            <Description>
+                                <![CDATA[Try to show x32 stacks of all threads in x64 dump.]]>
+                            </Description>
+                        </AliasItem>
+                    </FunctionAlias>
+                </FunctionAliases>
+            </ScriptComponent>
+        </Components>
+    </ExtensionPackage>
+</ExtensionPackages>
