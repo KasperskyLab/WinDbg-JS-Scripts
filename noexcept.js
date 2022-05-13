@@ -1,7 +1,7 @@
 /*///////////////////////////////////////////////////////////////////////
 MIT License
 
-Copyright (c) 2020 AO Kaspersky Lab. All Rights Reserved.
+Copyright (c) 2020-2022 AO Kaspersky Lab. All Rights Reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -110,7 +110,7 @@ function __FixStack()
     var nextCaller = "";
     var nextAddress = "";
     var ebpRE = /^([0-9A-Fa-f]+)\s+([0-9A-Fa-f]+)/;
-    var symRE = /^([0-9A-Fa-f]+)\s+([0-9A-Fa-f]+)\s+(.+)$/;
+    var symRE = /^([0-9A-Fa-f]+)\s+([0-9A-Fa-f]+)\s*(.*)$/;
     for (; prevEBP != "00000000";)
     {
         if (nextCaller.length > 0)
