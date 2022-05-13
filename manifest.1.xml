@@ -75,4 +75,36 @@
             </ScriptComponent>
         </Components>
     </ExtensionPackage>
+
+    <ExtensionPackage>
+        <Name>MemoryHelpers</Name>
+        <Version>1.0.0.1</Version>
+        <Description>Heap and memory helpers.</Description>
+        <Components>
+            <ScriptComponent Name="MemoryHelpers" Type="Engine" File="memory.js" FilePathKind="RepositoryRelative">
+                <FunctionAliases>
+                    <FunctionAlias Name="av_heap_alloc_stats">
+                        <AliasItem>
+                            <Syntax>
+                                <![CDATA[!av_heap_alloc_stats 0x[<heap address>], 0x[<block size in hex>]]]>
+                            </Syntax>
+                            <Description>
+                                <![CDATA[Collect stats about allocation stacks of block with size [<block size in hex>] in heap [<heap address>]. Note! This command requires AppVerifier for heap to be enabled]]>
+                            </Description>
+                        </AliasItem>
+                    </FunctionAlias>
+                    <FunctionAlias Name="heap_alloc_stats">
+                        <AliasItem>
+                            <Syntax>
+                                <![CDATA[!heap_alloc_stats 0x[<heap address>]]]>
+                            </Syntax>
+                            <Description>
+                                <![CDATA[Collect stats about data in the first 16 bytes of blocks in heap [<heap address>]]]>
+                            </Description>
+                        </AliasItem>
+                    </FunctionAlias>
+                </FunctionAliases>
+            </ScriptComponent>
+        </Components>
+    </ExtensionPackage>
 </ExtensionPackages>

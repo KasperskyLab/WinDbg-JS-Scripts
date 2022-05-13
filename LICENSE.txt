@@ -1,4 +1,4 @@
-Copyright © 2020 AO Kaspersky Lab. All Rights Reserved.
+Copyright © 2020-2022 AO Kaspersky Lab. All Rights Reserved.
  
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
